@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM e Recursos Humanos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="login-screen" id="loginScreen" hidden>
+      <form class="login-panel" id="loginForm">
+        <div class="brand login-brand">
+          <span class="brand-mark">D</span>
+          <div>
+            <strong><span class="brand-muted">DUO</span><span class="brand-red">MOLD</span></strong>
+            <small>Molds Industry</small>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Email</span>
+          <input id="loginEmail" type="email" autocomplete="username" required placeholder="admin@empresa.pt" />
+        </label>
+
+        <label class="field">
+          <span>Senha</span>
+          <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="Digite a senha" />
+        </label>
+
+        <p class="form-alert" id="loginAlert"></p>
+        <button class="primary-button" type="submit">Entrar</button>
+
+        <div class="login-help">
+          <strong>Acessos iniciais</strong>
+          <small>Admin: admin@empresa.pt / admin123</small>
+          <small>RH: rh@empresa.pt / rh123</small>
+          <small>Funcionario: joao@empresa.pt / funcionario123</small>
+          <small>Cliente: ana@metalnorte.pt / cliente123</small>
+        </div>
+      </form>
+    </section>
+
+    <div class="app-shell" id="appShell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">D</span>
+          <div>
+            <strong><span class="brand-muted">DUO</span><span class="brand-red">MOLD</span></strong>
+            <small>Molds Industry</small>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active" data-view="dashboard" type="button">Painel</button>
+          <button class="nav-item" data-view="adminPage" type="button">Admin</button>
+          <button class="nav-item" data-view="rhPage" type="button">RH</button>
+          <button class="nav-item" data-view="employeePage" type="button">Funcionario</button>
+          <button class="nav-item" data-view="clients" type="button">Clientes</button>
+          <button class="nav-item" data-view="companies" type="button">Empresas</button>
+          <button class="nav-item" data-view="orders" type="button">Encomendas</button>
+          <button class="nav-item" data-view="clientPortal" type="button">Meu pedido</button>
+          <button class="nav-item" data-view="users" type="button">Colaboradores</button>
+          <button class="nav-item" data-view="vacations" type="button">Ferias</button>
+          <button class="nav-item" data-view="absences" type="button">Faltas</button>
+        </nav>
+
+        <div class="login-card">
+          <span>Ver como</span>
+          <select id="demoAccountSelect"></select>
+          <strong id="currentSessionName">Admin</strong>
+          <small id="sessionHint">Acesso total ao sistema</small>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1 id="pageTitle">Painel</h1>
+            <p id="pageSubtitle">Visao geral dos clientes, empresas e equipa.</p>
+          </div>
+          <div class="topbar-actions">
+            <button class="secondary-button" id="exportButton" type="button">Exportar dados</button>
+            <button class="primary-button" id="newRecordButton" type="button">Novo cliente</button>
+          </div>
+        </header>
+
+        <section class="dashboard view active" id="dashboardView">
+          <div class="metrics">
+            <article class="metric">
+              <span>Total de clientes</span>
+              <strong id="totalClients">0</strong>
+            </article>
+            <article class="metric">
+              <span>Empresas cadastradas</span>
+              <strong id="totalCompanies">0</strong>
+            </article>
+            <article class="metric">
+              <span>Colaboradores</span>
+              <strong id="totalUsers">0</strong>
+            </article>
